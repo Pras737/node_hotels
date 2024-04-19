@@ -1,5 +1,7 @@
 const mongoose=require('mongoose');
-const mongoURL="mongodb+srv://pk5484257:pk12345@cluster0.ge7wmuw.mongodb.net/?retryWrites=true&w=majority"
+require('dotenv').config();
+
+const mongoURL=process.env.DB_URL;
 
 mongoose.connect(mongoURL,{
     useUnifiedTopology:true,
